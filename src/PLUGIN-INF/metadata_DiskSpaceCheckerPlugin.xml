@@ -1,0 +1,121 @@
+<pl:metadata-config xmlns:pl="http://www.exlibrisgroup.com/Plugins/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  <pl:pluginTypeName>StartUpCheckPlugin</pl:pluginTypeName>
+  <pl:deployName>DiskSpaceCheckerPluginExample</pl:deployName>
+  <pl:className>com.exlibris.dps.repository.plugin.checks.DiskSpaceCheckerPlugin</pl:className>
+  <pl:initParameters>
+  <fr:x_form  xmlns:fr="http://com/exlibris/digitool/common/forms/xmlbeans">
+	<form_name>DiskSpaceCheckerPlugin_Parameters</form_name>
+	<description>DiskSpaceCheckerPlugin_Parameters</description>
+	<grid_x>1</grid_x>
+	<md_format>1</md_format>
+	<x_fields>
+		<x_field>
+			<field_name>PATH</field_name>
+			<label>Path</label>
+			<ui_tool_tip>Path</ui_tool_tip>
+			<single>true</single>
+			<default_value>/exlibris</default_value>
+			<mandatory>true</mandatory>
+			<x_logic_type>String</x_logic_type>
+			<x_ui_type>TextField</x_ui_type>
+			<css_class>width20</css_class>
+			<x_options></x_options>
+		</x_field>
+		<x_field>
+			<field_name>SERVER_ROLE</field_name>
+			<label>Server Role</label>
+			<ui_tool_tip>Server Role</ui_tool_tip>
+			<single>true</single>
+			<default_value>ALL</default_value>
+			<mandatory>true</mandatory>
+			<x_logic_type>String</x_logic_type>
+		    <x_ui_type>ComboBox</x_ui_type>
+		    <css_class>width5</css_class>
+		    <x_options>
+	           	<x_option>
+	              <value>ALL</value>
+	              <label>All</label>
+	            </x_option>
+	            <x_option>
+	              <value>DEP</value>
+	              <label>DEP</label>
+	            </x_option>
+	             <x_option>
+	              <value>REP</value>
+	              <label>REP</label>
+	            </x_option>
+	            <x_option>
+	              <value>DEL</value>
+	              <label>DEL</label>
+	            </x_option>
+	            <x_option>
+	              <value>PER</value>
+	              <label>PER</label>
+	            </x_option>
+	        </x_options>
+		</x_field>
+		<x_field>
+			<field_name>WARNING_THRESHOLD</field_name>
+			<label>Warning Threshold (%)</label>
+			<ui_tool_tip>Warning Threshold (%)</ui_tool_tip>
+			<single>true</single>
+			<default_value>75</default_value>
+			<mandatory>true</mandatory>
+			<validator_class_name>com.exlibris.core.infra.web.utils.formBuilder.validator.NumericFormValidator</validator_class_name>
+			<x_logic_type>String</x_logic_type>
+			<x_ui_type>TextField</x_ui_type>
+			<css_class>width3</css_class>
+			<x_options></x_options>
+		</x_field>
+		<x_field>
+			<field_name>ERROR_THRESHOLD</field_name>
+			<label>Error Threshold (%)</label>
+			<ui_tool_tip>Error Threshold (%)</ui_tool_tip>
+			<single>true</single>
+			<default_value>90</default_value>
+			<mandatory>true</mandatory>
+			<validator_class_name>com.exlibris.core.infra.web.utils.formBuilder.validator.NumericFormValidator</validator_class_name>
+			<x_logic_type>String</x_logic_type>
+			<x_ui_type>TextField</x_ui_type>
+			<css_class>width3</css_class>
+			<x_options></x_options>
+		</x_field>
+		<x_field>
+			<field_name>FATAL_THRESHOLD</field_name>
+			<label>Fatal Threshold (%)</label>
+			<ui_tool_tip>Fatal Threshold (%)</ui_tool_tip>
+			<single>true</single>
+			<default_value>95</default_value>
+			<mandatory>true</mandatory>
+			<validator_class_name>com.exlibris.core.infra.web.utils.formBuilder.validator.NumericFormValidator</validator_class_name>
+			<x_logic_type>String</x_logic_type>
+			<x_ui_type>TextField</x_ui_type>
+			<css_class>width3</css_class>
+			<x_options></x_options>
+		</x_field>
+	</x_fields>
+	</fr:x_form>
+  </pl:initParameters>
+  <pl:description>Disk Space Checker Plugin</pl:description>
+  <pl:version>1</pl:version>
+  <pl:materialType>DIGITAL</pl:materialType>
+  <pl:module>Repository</pl:module>
+  <pl:generalType>TASK</pl:generalType>
+  <pl:publicApi>N</pl:publicApi>
+  <pl:implType>java</pl:implType>
+  <pl:contactPerson>
+		<contact_info xmlns="http://www.exlibrisgroup.com/Plugins/1.0/">
+			<contactType>admin</contactType>
+			<firstName>Exlibris</firstName>
+			<lastName>Ltd</lastName>
+			<telephone1>(050)746-1234</telephone1>
+			<telephone2></telephone2>
+			<email>adiko@exlibris.co.il</email>
+			<address1>Agodat Asport2 Building 9</address1>
+			<address2></address2>
+			<city>Jerusalem</city>
+			<zipCode>00000</zipCode>
+			<country>Israel</country>
+		</contact_info>
+	</pl:contactPerson>
+</pl:metadata-config>
