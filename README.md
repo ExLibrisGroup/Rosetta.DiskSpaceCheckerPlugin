@@ -1,3 +1,3 @@
 # Rosetta.DiskSpaceCheckerPlugin
 Developer Network :
-https://developers.exlibrisgroup.com/rosetta/sdk/plugins
+https://developers.exlibrisgroup.com/blog/Rosetta-Storage-Space-Checker
